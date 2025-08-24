@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Traditional Clothing - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #e17055, #d63031);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .clothing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .clothing-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .clothing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .clothing-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .clothing-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+        }
+        
+        .clothing-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .clothing-overlay .japanese-name {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .clothing-content {
+            padding: 2rem;
+        }
+        
+        .clothing-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .clothing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .clothing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .clothing-features li:before {
+            content: "👘";
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .clothing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .occasion-info {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .occasion-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .occasion-info h4:before {
+            content: "🎎";
+            margin-right: 0.5rem;
+        }
+        
+        .seasonal-info {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .seasonal-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .seasonal-info h4:before {
+            content: "🌸";
+            margin-right: 0.5rem;
+        }
+        
+        .cultural-significance {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .cultural-significance h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cultural-significance h4:before {
+            content: "🏮";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .clothing-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Traditional Japanese Clothing</h1>
+            <p>Explore the elegant world of Japanese traditional garments, from formal kimono to casual yukata</p>
+        </div>
+    </section>
+
+    <div class="clothing-grid">
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Kimono</h3>
+                    <div class="japanese-name">着物</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    The kimono is the most iconic traditional Japanese garment, characterized by its T-shaped, straight-lined robe with collars and long, wide sleeves.
+                </p>
+                <ul class="clothing-features">
+                    <li>Made from silk or synthetic materials with intricate patterns</li>
+                    <li>Worn for formal occasions, ceremonies, and special events</li>
+                    <li>Requires specific techniques and accessories to wear properly</li>
+                    <li>Different patterns and colors for different seasons and occasions</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Weddings, tea ceremonies, coming-of-age ceremonies, formal events, and traditional performances</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Variations</h4>
+                    <p>Spring: cherry blossoms and pastels, Summer: lighter fabrics, Autumn: autumn leaves, Winter: darker colors and heavier fabrics</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents Japanese aesthetics, craftsmanship, and cultural identity, embodying the principles of harmony and beauty</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Yukata</h3>
+                    <div class="japanese-name">浴衣</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    Yukata is a casual summer kimono made from cotton, traditionally worn after bathing and during summer festivals.
+                </p>
+                <ul class="clothing-features">
+                    <li>Lightweight cotton fabric perfect for hot weather</li>
+                    <li>Simpler design than formal kimono</li>
+                    <li>Often worn with geta (wooden sandals)</li>
+                    <li>Popular choice for summer festivals and fireworks displays</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Summer festivals, fireworks displays, hot spring visits, casual summer outings, and traditional inn stays</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Use</h4>
+                    <p>Primarily worn during summer months, though some people wear them year-round in casual settings</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the relaxed, festive side of Japanese culture and the importance of seasonal traditions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Hakama</h3>
+                    <div class="japanese-name">袴</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    Hakama are traditional Japanese trousers, originally worn by samurai and now commonly worn by both men and women for formal occasions.
+                </p>
+                <ul class="clothing-features">
+                    <li>Pleated skirt-like trousers with wide legs</li>
+                    <li>Often worn over kimono for formal occasions</li>
+                    <li>Different styles for men and women</li>
+                    <li>Common in martial arts, tea ceremony, and academic ceremonies</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Graduation ceremonies, tea ceremonies, martial arts demonstrations, formal academic events, and traditional performances</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Use</h4>
+                    <p>Worn year-round for formal occasions, with different fabric weights for different seasons</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents formality, respect, and tradition, maintaining the dignity of Japanese cultural practices</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Furisode</h3>
+                    <div class="japanese-name">振袖</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    Furisode is a formal kimono with long, swinging sleeves, traditionally worn by unmarried women for special occasions.
+                </p>
+                <ul class="clothing-features">
+                    <li>Long, flowing sleeves that swing when walking</li>
+                    <li>Bright, colorful designs suitable for young women</li>
+                    <li>Most formal type of kimono for unmarried women</li>
+                    <li>Often worn with elaborate obi and accessories</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Coming-of-age ceremonies, weddings (as a guest), formal celebrations, and traditional performances</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Variations</h4>
+                    <p>Spring designs feature cherry blossoms, summer has lighter patterns, autumn includes maple leaves, winter has snow motifs</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Symbolizes youth, beauty, and the special status of unmarried women in traditional Japanese society</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Jinbei</h3>
+                    <div class="japanese-name">甚平</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    Jinbei is a traditional Japanese summer garment consisting of a short-sleeved top and shorts, popular for casual wear during hot weather.
+                </p>
+                <ul class="clothing-features">
+                    <li>Lightweight cotton fabric for comfort in hot weather</li>
+                    <li>Consists of a top and matching shorts</li>
+                    <li>Often worn by men and children</li>
+                    <li>Popular for summer festivals and casual home wear</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Summer festivals, casual home wear, hot weather outings, traditional inn stays, and summer activities</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Use</h4>
+                    <p>Exclusively summer wear, designed for maximum comfort and breathability in hot, humid weather</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the practical, comfortable side of Japanese traditional clothing and adaptation to seasonal needs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clothing-card">
+            <div class="clothing-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="clothing-overlay">
+                    <h3>Haori</h3>
+                    <div class="japanese-name">羽織</div>
+                </div>
+            </div>
+            <div class="clothing-content">
+                <p class="clothing-description">
+                    Haori is a traditional Japanese jacket worn over kimono, originally designed as a protective outer garment and now used for both practical and decorative purposes.
+                </p>
+                <ul class="clothing-features">
+                    <li>Short jacket worn over kimono</li>
+                    <li>Often features family crests or decorative designs</li>
+                    <li>Can be formal or casual depending on design</li>
+                    <li>Provides warmth and protection from the elements</li>
+                </ul>
+                <div class="occasion-info">
+                    <h4>Occasions</h4>
+                    <p>Formal events, tea ceremonies, traditional performances, seasonal celebrations, and as a fashion statement</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Use</h4>
+                    <p>Worn year-round, with different weights and designs for different seasons</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the layering tradition in Japanese clothing and the importance of both function and aesthetics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.clothing-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cultural Values - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .value-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .value-header {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .value-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .value-header .japanese-name {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .value-content {
+            padding: 2rem;
+        }
+        
+        .value-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .value-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .value-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .value-features li:before {
+            content: "🎯";
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .value-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .meaning-info {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .meaning-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .meaning-info h4:before {
+            content: "💭";
+            margin-right: 0.5rem;
+        }
+        
+        .application-info {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .application-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .application-info h4:before {
+            content: "🔧";
+            margin-right: 0.5rem;
+        }
+        
+        .cultural-significance {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .cultural-significance h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cultural-significance h4:before {
+            content: "🏮";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Japanese Cultural Values</h1>
+            <p>Discover the fundamental principles and philosophies that shape Japanese society and guide daily life</p>
+        </div>
+    </section>
+
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Wa (Harmony)</h3>
+                <div class="japanese-name">和</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Wa represents the fundamental Japanese value of harmony, emphasizing peaceful coexistence, cooperation, and maintaining balance in relationships and society.
+                </p>
+                <ul class="value-features">
+                    <li>Emphasizes group harmony over individual desires</li>
+                    <li>Promotes cooperation and consensus-building</li>
+                    <li>Values peaceful conflict resolution</li>
+                    <li>Influences decision-making and social interactions</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the ideal of peaceful coexistence and the importance of maintaining social balance and unity</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Seen in workplace dynamics, family relationships, community interactions, and social etiquette</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Forms the foundation of Japanese social structure and interpersonal relationships, promoting stability and cooperation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Gaman (Endurance)</h3>
+                <div class="japanese-name">我慢</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Gaman is the value of patience, perseverance, and self-control in the face of adversity, emphasizing the importance of enduring difficulties with dignity.
+                </p>
+                <ul class="value-features">
+                    <li>Encourages patience during difficult times</li>
+                    <li>Emphasizes self-control and emotional restraint</li>
+                    <li>Values perseverance and determination</li>
+                    <li>Promotes resilience in challenging situations</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the strength to endure hardships with patience and dignity, without complaining or giving up</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Applied in work situations, personal challenges, natural disasters, and maintaining composure under pressure</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Reflects the Japanese spirit of resilience and the cultural emphasis on maintaining dignity in difficult circumstances</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Omotenashi (Hospitality)</h3>
+                <div class="japanese-name">おもてなし</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Omotenashi is the Japanese concept of wholehearted hospitality, going above and beyond to anticipate and fulfill guests' needs with genuine care and attention.
+                </p>
+                <ul class="value-features">
+                    <li>Emphasizes anticipating guests' needs</li>
+                    <li>Values genuine care and attention to detail</li>
+                    <li>Promotes selfless service and consideration</li>
+                    <li>Creates memorable and comfortable experiences</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the art of hospitality that goes beyond basic service to create meaningful, thoughtful experiences</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Seen in customer service, tea ceremonies, traditional inns, restaurants, and social gatherings</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Showcases Japanese attention to detail and the cultural emphasis on creating positive experiences for others</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Kaizen (Continuous Improvement)</h3>
+                <div class="japanese-name">改善</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Kaizen is the philosophy of continuous improvement, emphasizing small, incremental changes that lead to significant long-term progress and excellence.
+                </p>
+                <ul class="value-features">
+                    <li>Focuses on small, incremental improvements</li>
+                    <li>Emphasizes continuous learning and development</li>
+                    <li>Values process improvement and efficiency</li>
+                    <li>Promotes a culture of ongoing enhancement</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the belief that continuous, small improvements lead to significant long-term progress and excellence</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Applied in business processes, personal development, education, manufacturing, and quality management</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Reflects the Japanese commitment to excellence and the cultural value of never being satisfied with the status quo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Mottainai (Waste Not)</h3>
+                <div class="japanese-name">もったいない</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Mottainai expresses regret over waste and emphasizes the importance of using resources wisely, avoiding waste, and appreciating the value of things.
+                </p>
+                <ul class="value-features">
+                    <li>Encourages mindful use of resources</li>
+                    <li>Values appreciation for what one has</li>
+                    <li>Promotes recycling and reuse</li>
+                    <li>Emphasizes gratitude and respect for resources</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the feeling of regret over waste and the appreciation for the value and potential of resources</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Seen in food practices, recycling efforts, resource conservation, and mindful consumption habits</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Reflects Japanese respect for resources and the cultural emphasis on sustainability and mindful living</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-card">
+            <div class="value-header">
+                <h3>Shin-Gi-Tai (Mind-Technique-Body)</h3>
+                <div class="japanese-name">心技体</div>
+            </div>
+            <div class="value-content">
+                <p class="value-description">
+                    Shin-Gi-Tai represents the three essential elements for mastery: mental strength (shin), technical skill (gi), and physical conditioning (tai).
+                </p>
+                <ul class="value-features">
+                    <li>Emphasizes balanced development of three elements</li>
+                    <li>Values mental discipline and focus</li>
+                    <li>Promotes technical excellence and skill</li>
+                    <li>Requires physical fitness and conditioning</li>
+                </ul>
+                <div class="meaning-info">
+                    <h4>Meaning</h4>
+                    <p>Represents the holistic approach to mastery that balances mental, technical, and physical development</p>
+                </div>
+                <div class="application-info">
+                    <h4>Daily Application</h4>
+                    <p>Applied in martial arts, sports, traditional crafts, education, and personal development pursuits</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Reflects the Japanese approach to mastery and the cultural emphasis on comprehensive, balanced development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.value-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Japan - Explore the Land of Rising Sun</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-torii-gate"></i>
+                <span>Cultural Japan</span>
+            </div>
+                               <ul class="nav-menu">
+                       <li class="nav-item">
+                           <a href="#home" class="nav-link">Home</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#food" class="nav-link">Food</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#music" class="nav-link">Music</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#traditions" class="nav-link">Traditions</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#clothing" class="nav-link">Clothing</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#festivals" class="nav-link">Festivals</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#values" class="nav-link">Values</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a href="#" class="nav-link">Learn More <i class="fas fa-chevron-down"></i></a>
+                           <ul class="dropdown-menu">
+                               <li><a href="detail-pages/index.html">All Details</a></li>
+                               <li><a href="detail-pages/food-details.html">Food Details</a></li>
+                               <li><a href="detail-pages/music-details.html">Music Details</a></li>
+                               <li><a href="detail-pages/traditions-details.html">Traditions Details</a></li>
+                               <li><a href="detail-pages/clothing-details.html">Clothing Details</a></li>
+                               <li><a href="detail-pages/festivals-details.html">Festivals Details</a></li>
+                               <li><a href="detail-pages/values-details.html">Values Details</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover the Rich Culture of Japan</h1>
+            <p>Immerse yourself in centuries of tradition, art, and innovation</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('food')">Start Exploring</button>
+                <button class="btn btn-secondary" onclick="playBackgroundMusic()">
+                    <i class="fas fa-music"></i> Play Traditional Music
+                </button>
+            </div>
+        </div>
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="food" class="section">
+        <div class="container">
+            <h2 class="section-title">Culinary Delights</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Traditional Japanese Cuisine</h3>
+                    <p>Japanese cuisine is renowned worldwide for its emphasis on seasonal ingredients, meticulous preparation, and beautiful presentation. From the delicate art of sushi to the comforting warmth of ramen, each dish tells a story of tradition and innovation.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-fish"></i>
+                            <h4>Sushi & Sashimi</h4>
+                            <p>Fresh raw fish and vinegared rice, representing the pinnacle of Japanese culinary artistry.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Ramen</h4>
+                            <p>Noodles in rich broth, with regional variations from Hokkaido to Kyushu.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Tempura</h4>
+                            <p>Lightly battered and fried seafood and vegetables, introduced by Portuguese traders.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bowl-food"></i>
+                            <h4>Miso Soup</h4>
+                            <p>Traditional soup made with fermented soybean paste, a staple of Japanese meals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="detail-pages/food-details.html" class="btn btn-primary">Learn More About Japanese Food</a>
+                    </div>
+                </div>
+                <div class="content-media">
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400" alt="Sushi" class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400" alt="Ramen" class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03246963d6a9?w=400" alt="Tempura" class="gallery-img">
+                    </div>
+                    <audio controls class="audio-player">
+                        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p class="audio-caption">Traditional Japanese tea ceremony sounds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="section">
+        <div class="container">
+            <h2 class="section-title">Musical Heritage</h2>
+            <div class="content-grid reverse">
+                <div class="content-media">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="instrument-showcase">
+                        <div class="instrument">
+                            <i class="fas fa-drum"></i>
+                            <span>Taiko Drums</span>
+                        </div>
+                        <div class="instrument">
+                            <i class="fas fa-guitar"></i>
+                            <span>Koto</span>
+                        </div>
+                        <div class="instrument">
+                            <i class="fas fa-music"></i>
+                            <span>Shamisen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h3>Traditional Japanese Music</h3>
+                    <p>Japanese music encompasses a rich tapestry of sounds, from the ancient court music of Gagaku to the soulful melodies of traditional folk songs. Each genre reflects different aspects of Japanese culture and history.</p>
+                    
+                    <div class="music-genres">
+                        <div class="genre">
+                            <h4>Gagaku (雅楽)</h4>
+                            <p>Ancient court music performed at imperial ceremonies, featuring wind and string instruments.</p>
+                        </div>
+                        <div class="genre">
+                            <h4>Min'yō (民謡)</h4>
+                            <p>Traditional folk songs passed down through generations, often accompanied by shamisen.</p>
+                        </div>
+                        <div class="genre">
+                            <h4>Taiko (太鼓)</h4>
+                            <p>Powerful drumming performances that combine rhythm, movement, and spiritual significance.</p>
+                        </div>
+                        <div class="genre">
+                            <h4>Enka (演歌)</h4>
+                            <p>Modern traditional music that blends Western and Japanese musical elements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="detail-pages/music-details.html" class="btn btn-primary">Learn More About Japanese Music</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditions Section -->
+    <section id="traditions" class="section">
+        <div class="container">
+            <h2 class="section-title">Cultural Traditions</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Time-Honored Customs</h3>
+                    <p>Japanese traditions are deeply rooted in respect, harmony, and the appreciation of beauty in everyday life. These customs have been preserved and passed down through generations, shaping the modern Japanese way of life.</p>
+                    
+                    <div class="tradition-cards">
+                        <div class="tradition-card">
+                            <div class="card-icon">
+                                <i class="fas fa-tea"></i>
+                            </div>
+                            <h4>Tea Ceremony (茶道)</h4>
+                            <p>The art of preparing and serving matcha tea, emphasizing mindfulness and hospitality.</p>
+                        </div>
+                        <div class="tradition-card">
+                            <div class="card-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h4>Ikebana (生け花)</h4>
+                            <p>Japanese flower arrangement that creates harmony between humanity and nature.</p>
+                        </div>
+                        <div class="tradition-card">
+                            <div class="card-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h4>Calligraphy (書道)</h4>
+                            <p>The art of beautiful writing using brush and ink, considered a form of meditation.</p>
+                        </div>
+                        <div class="tradition-card">
+                            <div class="card-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4>Zen Buddhism</h4>
+                            <p>Philosophy emphasizing meditation and mindfulness in daily activities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="detail-pages/traditions-details.html" class="btn btn-primary">Learn More About Japanese Traditions</a>
+                    </div>
+                </div>
+                <div class="content-media">
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400" alt="Tea Ceremony" class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Ikebana" class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Calligraphy" class="gallery-img">
+                    </div>
+                    <div class="interactive-element">
+                        <h4>Try Traditional Greeting</h4>
+                        <button class="btn btn-traditional" onclick="showGreeting()">Bow (お辞儀)</button>
+                        <div id="greeting-result" class="greeting-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clothing Section -->
+    <section id="clothing" class="section">
+        <div class="container">
+            <h2 class="section-title">Traditional Attire</h2>
+            <div class="content-grid reverse">
+                <div class="content-media">
+                    <div class="clothing-showcase">
+                        <div class="clothing-item active" onclick="showClothingDetails('kimono')">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300" alt="Kimono">
+                            <h4>Kimono</h4>
+                        </div>
+                        <div class="clothing-item" onclick="showClothingDetails('yukata')">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300" alt="Yukata">
+                            <h4>Yukata</h4>
+                        </div>
+                        <div class="clothing-item" onclick="showClothingDetails('hakama')">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300" alt="Hakama">
+                            <h4>Hakama</h4>
+                        </div>
+                    </div>
+                    <div id="clothing-details" class="clothing-details">
+                        <h3>Kimono (着物)</h3>
+                        <p>The kimono is a traditional Japanese garment worn by both men and women. It features a T-shaped, straight-lined robe with collars and long, wide sleeves, secured with a sash called an obi.</p>
+                        <ul>
+                            <li>Made from silk or synthetic materials</li>
+                            <li>Worn for formal occasions and ceremonies</li>
+                            <li>Different patterns and colors for different seasons</li>
+                            <li>Requires specific techniques to wear properly</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h3>Elegant Japanese Fashion</h3>
+                    <p>Traditional Japanese clothing reflects the country's aesthetic values of simplicity, elegance, and attention to detail. Each garment has specific cultural significance and is worn for particular occasions.</p>
+                    
+                    <div class="clothing-features">
+                        <div class="feature">
+                            <h4>Seasonal Adaptation</h4>
+                            <p>Clothing patterns and materials change with the seasons, reflecting nature's cycles.</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Social Status</h4>
+                            <p>Different styles and patterns indicate age, marital status, and social position.</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Artistic Expression</h4>
+                            <p>Fabrics often feature traditional motifs like cherry blossoms, waves, and geometric patterns.</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Cultural Preservation</h4>
+                            <p>Traditional clothing continues to be worn at festivals, ceremonies, and special events.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="detail-pages/clothing-details.html" class="btn btn-primary">Learn More About Japanese Clothing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Festivals Section -->
+    <section id="festivals" class="section">
+        <div class="container">
+            <h2 class="section-title">Celebrations & Festivals</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Seasonal Celebrations</h3>
+                    <p>Japanese festivals (matsuri) are vibrant celebrations that mark the changing seasons, honor deities, and bring communities together. Each festival has unique customs, foods, and activities.</p>
+                    
+                    <div class="festival-timeline">
+                        <div class="festival-event">
+                            <div class="event-date">January</div>
+                            <div class="event-content">
+                                <h4>Hatsumode (初詣)</h4>
+                                <p>First shrine visit of the year, marking new beginnings and good fortune.</p>
+                            </div>
+                        </div>
+                        <div class="festival-event">
+                            <div class="event-date">March</div>
+                            <div class="event-content">
+                                <h4>Hinamatsuri (雛祭り)</h4>
+                                <p>Doll Festival celebrating girls, featuring elaborate doll displays and traditional foods.</p>
+                            </div>
+                        </div>
+                        <div class="festival-event">
+                            <div class="event-date">July</div>
+                            <div class="event-content">
+                                <h4>Gion Matsuri (祇園祭)</h4>
+                                <p>Kyoto's famous festival with parades, traditional music, and elaborate floats.</p>
+                            </div>
+                        </div>
+                        <div class="festival-event">
+                            <div class="event-date">December</div>
+                            <div class="event-content">
+                                <h4>Ōmisoka (大晦日)</h4>
+                                <p>New Year's Eve celebrations with temple bell ringing and family gatherings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-media">
+                    <div class="festival-gallery">
+                        <div class="festival-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Festival" class="gallery-img">
+                            <div class="image-overlay">
+                                <h4>Summer Festival</h4>
+                                <p>Experience the excitement of traditional Japanese festivals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival-interactive">
+                        <h4>Festival Countdown</h4>
+                        <div id="festival-countdown" class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <label>Days</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <label>Hours</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <label>Minutes</label>
+                            </div>
+                        </div>
+                        <p>Until next major festival</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="detail-pages/festivals-details.html" class="btn btn-primary">Learn More About Japanese Festivals</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="section">
+        <div class="container">
+            <h2 class="section-title">Core Values & Philosophy</h2>
+            <div class="content-grid reverse">
+                <div class="content-media">
+                    <div class="values-visual">
+                        <div class="value-circle" onclick="showValueDetails('wa')">
+                            <i class="fas fa-heart"></i>
+                            <span>和 (Wa)</span>
+                        </div>
+                        <div class="value-circle" onclick="showValueDetails('gaman')">
+                            <i class="fas fa-fist-raised"></i>
+                            <span>我慢 (Gaman)</span>
+                        </div>
+                        <div class="value-circle" onclick="showValueDetails('omotenashi')">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>おもてなし (Omotenashi)</span>
+                        </div>
+                        <div class="value-circle" onclick="showValueDetails('kaizen')">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>改善 (Kaizen)</span>
+                        </div>
+                    </div>
+                    <div id="value-details" class="value-details">
+                        <h3>和 (Wa) - Harmony</h3>
+                        <p>Wa represents the Japanese concept of harmony, emphasizing peaceful coexistence and group unity. It's reflected in social interactions, business practices, and daily life.</p>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h3>Japanese Cultural Values</h3>
+                    <p>Japanese society is built upon a foundation of deeply held values that guide behavior, relationships, and decision-making. These principles have shaped Japanese culture for centuries and continue to influence modern society.</p>
+                    
+                    <div class="values-explanation">
+                        <div class="value-item">
+                            <h4>Respect (尊敬 - Sonkei)</h4>
+                            <p>Deep respect for others, nature, and tradition, expressed through language, behavior, and social customs.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Diligence (勤勉 - Kinben)</h4>
+                            <p>Commitment to hard work, continuous improvement, and excellence in all endeavors.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Gratitude (感謝 - Kansha)</h4>
+                            <p>Expressing appreciation for others' kindness, nature's bounty, and life's blessings.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Modesty (謙虚 - Kenkyo)</h4>
+                            <p>Humility and understatement, avoiding excessive self-promotion or boasting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="detail-pages/values-details.html" class="btn btn-primary">Learn More About Japanese Values</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cultural Japan</h3>
+                    <p>Exploring the rich heritage and traditions of Japan</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#traditions">Traditions</a></li>
+                        <li><a href="#clothing">Clothing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#festivals">Festivals</a></li>
+                        <li><a href="#values">Values</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: radianislam19@gmail.com</p>
+                    <p>Phone: +8001832270703</p>
+                    <button class="btn btn-newsletter">Subscribe to Newsletter</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Radian Islam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Background -->
+    <audio id="background-music" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

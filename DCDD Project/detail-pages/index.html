@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Culture - Detailed Pages</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .page-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .page-header {
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-header.food { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .page-header.music { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+        .page-header.traditions { background: linear-gradient(135deg, #00b894, #00a085); }
+        .page-header.clothing { background: linear-gradient(135deg, #e17055, #d63031); }
+        .page-header.festivals { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+        .page-header.values { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+        
+        .page-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .page-header .japanese-name {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .page-content {
+            padding: 2rem;
+        }
+        
+        .page-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .page-features li:before {
+            content: "✨";
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .page-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .explore-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .explore-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pages-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Explore Japanese Culture</h1>
+            <p>Dive deeper into the rich traditions, customs, and values that make Japan unique</p>
+        </div>
+    </section>
+
+    <div class="pages-grid">
+        <a href="food-details.html" class="page-card">
+            <div class="page-header food">
+                <h3>Japanese Food</h3>
+                <div class="japanese-name">日本料理</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Discover the art and tradition of Japanese cuisine, from sushi to ramen, and learn about the cultural significance of each dish.
+                </p>
+                <ul class="page-features">
+                    <li>Traditional dishes and preparation methods</li>
+                    <li>Seasonal ingredients and cultural significance</li>
+                    <li>Regional variations and specialties</li>
+                    <li>Dining etiquette and traditions</li>
+                </ul>
+                <div class="explore-btn">Explore Food Culture</div>
+            </div>
+        </a>
+
+        <a href="music-details.html" class="page-card">
+            <div class="page-header music">
+                <h3>Japanese Music</h3>
+                <div class="japanese-name">日本の音楽</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Explore the diverse world of Japanese music, from ancient court melodies to modern J-pop and traditional instruments.
+                </p>
+                <ul class="page-features">
+                    <li>Traditional instruments and their history</li>
+                    <li>Classical and folk music traditions</li>
+                    <li>Modern Japanese music evolution</li>
+                    <li>Cultural significance and performance</li>
+                </ul>
+                <div class="explore-btn">Explore Music Heritage</div>
+            </div>
+        </a>
+
+        <a href="traditions-details.html" class="page-card">
+            <div class="page-header traditions">
+                <h3>Japanese Traditions</h3>
+                <div class="japanese-name">日本の伝統</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Learn about the time-honored customs and practices that have shaped Japanese culture for centuries.
+                </p>
+                <ul class="page-features">
+                    <li>Tea ceremony and spiritual practices</li>
+                    <li>Seasonal celebrations and festivals</li>
+                    <li>Traditional arts and crafts</li>
+                    <li>Social customs and etiquette</li>
+                </ul>
+                <div class="explore-btn">Explore Traditions</div>
+            </div>
+        </a>
+
+        <a href="clothing-details.html" class="page-card">
+            <div class="page-header clothing">
+                <h3>Traditional Clothing</h3>
+                <div class="japanese-name">伝統的な服装</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Discover the elegance and symbolism of Japanese traditional garments, from formal kimono to casual yukata.
+                </p>
+                <ul class="page-features">
+                    <li>Different types of traditional garments</li>
+                    <li>Seasonal variations and occasions</li>
+                    <li>Cultural significance and symbolism</li>
+                    <li>Wearing techniques and accessories</li>
+                </ul>
+                <div class="explore-btn">Explore Traditional Attire</div>
+            </div>
+        </a>
+
+        <a href="festivals-details.html" class="page-card">
+            <div class="page-header festivals">
+                <h3>Japanese Festivals</h3>
+                <div class="japanese-name">日本の祭り</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Experience the vibrant celebrations and seasonal festivals that bring Japanese communities together throughout the year.
+                </p>
+                <ul class="page-features">
+                    <li>Major festivals and their origins</li>
+                    <li>Seasonal celebrations and customs</li>
+                    <li>Traditional activities and foods</li>
+                    <li>Cultural significance and participation</li>
+                </ul>
+                <div class="explore-btn">Explore Festivals</div>
+            </div>
+        </a>
+
+        <a href="values-details.html" class="page-card">
+            <div class="page-header values">
+                <h3>Cultural Values</h3>
+                <div class="japanese-name">文化的価値観</div>
+            </div>
+            <div class="page-content">
+                <p class="page-description">
+                    Understand the fundamental principles and philosophies that guide Japanese society and shape daily life.
+                </p>
+                <ul class="page-features">
+                    <li>Core values and their meanings</li>
+                    <li>Philosophical principles and beliefs</li>
+                    <li>Application in modern society</li>
+                    <li>Cultural influence and significance</li>
+                </ul>
+                <div class="explore-btn">Explore Cultural Values</div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.page-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

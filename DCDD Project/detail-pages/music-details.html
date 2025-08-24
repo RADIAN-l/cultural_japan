@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Music Culture - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .music-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .music-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .music-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .music-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .music-header .japanese-name {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .music-content {
+            padding: 2rem;
+        }
+        
+        .music-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .music-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .music-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .music-features li:before {
+            content: "🎵";
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .music-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .audio-player {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .audio-player h4 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .audio-player h4:before {
+            content: "🎧";
+            margin-right: 0.5rem;
+        }
+        
+        .audio-player audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .instrument-info {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .instrument-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .instrument-info h4:before {
+            content: "🎸";
+            margin-right: 0.5rem;
+        }
+        
+        .cultural-significance {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .cultural-significance h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cultural-significance h4:before {
+            content: "🏮";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .music-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Japanese Music</h1>
+            <p>Explore the rich tapestry of traditional and modern Japanese music, from ancient court melodies to contemporary J-pop</p>
+        </div>
+    </section>
+
+    <div class="music-grid">
+        <div class="music-card">
+            <div class="music-header">
+                <h3>Traditional Gagaku</h3>
+                <div class="japanese-name">雅楽</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    Gagaku is the oldest form of classical music in Japan, performed at the Imperial Court for over 1,200 years. It combines instrumental music, vocal music, and dance.
+                </p>
+                <ul class="music-features">
+                    <li>Ancient court music dating back to the Heian period</li>
+                    <li>Features wind, string, and percussion instruments</li>
+                    <li>Includes both native Japanese and imported Chinese/Korean elements</li>
+                    <li>Performed at Shinto shrines and imperial ceremonies</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Hichiriki (double reed), Ryuteki (transverse flute), Sho (mouth organ), Biwa (lute), and various drums</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the highest form of Japanese classical music, preserving ancient traditions and court culture</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="music-header">
+                <h3>Koto Music</h3>
+                <div class="japanese-name">箏</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    The koto is a traditional Japanese stringed instrument with 13 strings, known for its distinctive sound and beautiful melodies that evoke the essence of Japanese culture.
+                </p>
+                <ul class="music-features">
+                    <li>13-string zither made from paulownia wood</li>
+                    <li>Strings are plucked with picks worn on the fingers</li>
+                    <li>Traditional tuning system with pentatonic scales</li>
+                    <li>Often accompanied by shamisen and shakuhachi</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Koto (13-string zither), Shamisen (3-string lute), Shakuhachi (bamboo flute)</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the refined elegance of Japanese traditional music, often associated with geisha culture and tea ceremonies</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="music-header">
+                <h3>Enka</h3>
+                <div class="japanese-name">演歌</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    Enka is a genre of Japanese music that combines traditional Japanese musical scales with Western instrumentation, creating a unique blend of old and new.
+                </p>
+                <ul class="music-features">
+                    <li>Emotional ballads with traditional Japanese melodies</li>
+                    <li>Lyrics often focus on themes of love, loss, and nostalgia</li>
+                    <li>Uses pentatonic scales and traditional vocal techniques</li>
+                    <li>Popular among older generations but still performed today</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Orchestra, traditional Japanese instruments, and powerful vocal performances</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the emotional heart of Japanese culture, preserving traditional musical values in a modern context</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="music-header">
+                <h3>J-Pop</h3>
+                <div class="japanese-name">J-ポップ</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    J-Pop encompasses various genres of popular music in Japan, from idol groups to rock bands, representing the modern face of Japanese music culture.
+                </p>
+                <ul class="music-features">
+                    <li>Diverse range of styles from pop to rock to electronic</li>
+                    <li>Strong emphasis on visual presentation and performance</li>
+                    <li>Idol culture with groups like AKB48 and Arashi</li>
+                    <li>Influences from Western pop while maintaining Japanese identity</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Electric guitars, synthesizers, drums, and modern recording technology</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents modern Japanese youth culture and global influence, showcasing Japan's ability to adapt and innovate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="music-header">
+                <h3>Taiko Drumming</h3>
+                <div class="japanese-name">太鼓</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    Taiko drumming is a powerful form of Japanese percussion music that combines athletic performance with spiritual and cultural significance.
+                </p>
+                <ul class="music-features">
+                    <li>Large drums played with wooden sticks (bachi)</li>
+                    <li>Combines music, dance, and martial arts elements</li>
+                    <li>Used in festivals, ceremonies, and modern performances</li>
+                    <li>Requires physical strength and precise timing</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Various sizes of taiko drums, from small shime-daiko to large o-daiko</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the power and spirit of Japanese culture, often used to drive away evil spirits and bring good fortune</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="music-header">
+                <h3>Shakuhachi</h3>
+                <div class="japanese-name">尺八</div>
+            </div>
+            <div class="music-content">
+                <p class="music-description">
+                    The shakuhachi is a traditional Japanese bamboo flute known for its meditative and spiritual qualities, originally used by Zen Buddhist monks.
+                </p>
+                <ul class="music-features">
+                    <li>End-blown bamboo flute with five finger holes</li>
+                    <li>Produces a wide range of tones and effects</li>
+                    <li>Traditionally used in Zen meditation and honkyoku</li>
+                    <li>Requires years of practice to master</li>
+                </ul>
+                <div class="instrument-info">
+                    <h4>Key Instruments</h4>
+                    <p>Shakuhachi (bamboo flute) in various lengths and tunings</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the spiritual and meditative aspects of Japanese culture, connecting music with Zen philosophy and mindfulness</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.music-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

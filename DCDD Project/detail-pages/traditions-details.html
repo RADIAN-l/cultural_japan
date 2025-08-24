@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Traditions - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .traditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .tradition-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tradition-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tradition-header {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .tradition-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .tradition-header .japanese-name {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .tradition-content {
+            padding: 2rem;
+        }
+        
+        .tradition-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .tradition-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .tradition-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tradition-features li:before {
+            content: "🏮";
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .tradition-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .ceremony-info {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .ceremony-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ceremony-info h4:before {
+            content: "🎎";
+            margin-right: 0.5rem;
+        }
+        
+        .seasonal-info {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .seasonal-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .seasonal-info h4:before {
+            content: "🌸";
+            margin-right: 0.5rem;
+        }
+        
+        .cultural-significance {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .cultural-significance h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cultural-significance h4:before {
+            content: "🎭";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .traditions-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Japanese Traditions</h1>
+            <p>Discover the deep-rooted customs, ceremonies, and practices that shape Japanese culture and society</p>
+        </div>
+    </section>
+
+    <div class="traditions-grid">
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Tea Ceremony</h3>
+                <div class="japanese-name">茶道</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    The Japanese tea ceremony, or chanoyu, is a traditional ritual influenced by Zen Buddhism in which powdered green tea is ceremonially prepared and served to guests.
+                </p>
+                <ul class="tradition-features">
+                    <li>Centers around the preparation and presentation of matcha tea</li>
+                    <li>Follows strict rules of etiquette and procedure</li>
+                    <li>Emphasizes harmony, respect, purity, and tranquility</li>
+                    <li>Can take several hours and includes a light meal</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Ceremony Elements</h4>
+                    <p>Includes preparation of tea utensils, serving of sweets, and the ritual preparation and serving of matcha tea</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Seasonal Variations</h4>
+                    <p>Different procedures and utensils for different seasons, with special attention to seasonal flowers and decorations</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the essence of Japanese aesthetics and philosophy, emphasizing mindfulness and appreciation of beauty</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Cherry Blossom Viewing</h3>
+                <div class="japanese-name">花見</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    Hanami is the traditional custom of enjoying the transient beauty of cherry blossoms, symbolizing the ephemeral nature of life and the arrival of spring.
+                </p>
+                <ul class="tradition-features">
+                    <li>People gather under cherry trees to celebrate spring</li>
+                    <li>Often includes picnics, food, and sake</li>
+                    <li>Cherry blossoms symbolize renewal and the fleeting nature of beauty</li>
+                    <li>Popular spots include parks, temples, and historical sites</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Celebration Elements</h4>
+                    <p>Includes traditional foods like sakura mochi, seasonal sake, and often traditional music and dance performances</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Best Time</h4>
+                    <p>Late March to early May, depending on location and weather conditions</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Celebrates the beauty of nature and the Japanese appreciation for seasonal changes and impermanence</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Coming of Age Day</h3>
+                <div class="japanese-name">成人の日</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    Seijin no Hi is a Japanese holiday held annually to congratulate and encourage people who have reached the age of majority (20 years old).
+                </p>
+                <ul class="tradition-features">
+                    <li>Celebrates those who turned 20 in the past year</li>
+                    <li>Young women wear traditional kimono (furisode)</li>
+                    <li>Young men wear traditional hakama or modern suits</li>
+                    <li>Ceremonies held at local government offices and shrines</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Ceremony Elements</h4>
+                    <p>Includes formal ceremonies, traditional dress, photo sessions, and often visits to shrines for blessings</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Date</h4>
+                    <p>Second Monday of January, marking the beginning of the new year and new adulthood</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Marks the transition to adulthood and emphasizes the responsibilities and privileges that come with being an adult in Japanese society</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Tanabata Festival</h3>
+                <div class="japanese-name">七夕</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    Tanabata is a traditional festival celebrating the meeting of the deities Orihime and Hikoboshi, represented by the stars Vega and Altair.
+                </p>
+                <ul class="tradition-features">
+                    <li>People write wishes on colorful strips of paper (tanzaku)</li>
+                    <li>Wishes are hung on bamboo branches</li>
+                    <li>Based on a Chinese legend about star-crossed lovers</li>
+                    <li>Celebrated with parades, traditional costumes, and decorations</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Festival Elements</h4>
+                    <p>Includes writing wishes, decorating bamboo, traditional dances, and often fireworks displays</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Date</h4>
+                    <p>July 7th, though some regions celebrate on August 7th due to calendar differences</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Celebrates love, hope, and the power of wishes, while maintaining connection to ancient astronomical traditions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Setsubun</h3>
+                <div class="japanese-name">節分</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    Setsubun marks the day before the beginning of spring in Japan, celebrated with rituals to drive away evil spirits and bring good fortune.
+                </p>
+                <ul class="tradition-features">
+                    <li>People throw roasted soybeans to drive away demons</li>
+                    <li>Often accompanied by the phrase "Oni wa soto! Fuku wa uchi!"</li>
+                    <li>Eating the number of beans equal to one's age brings good luck</li>
+                    <li>Celebrated at homes, temples, and shrines</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Ritual Elements</h4>
+                    <p>Includes bean throwing, eating lucky beans, and often wearing demon masks during celebrations</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Date</h4>
+                    <p>February 3rd or 4th, marking the transition from winter to spring</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the purification of homes and the welcoming of spring, emphasizing the importance of seasonal transitions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tradition-card">
+            <div class="tradition-header">
+                <h3>Shichi-Go-San</h3>
+                <div class="japanese-name">七五三</div>
+            </div>
+            <div class="tradition-content">
+                <p class="tradition-description">
+                    Shichi-Go-San is a traditional rite of passage and festival day for three- and seven-year-old girls and three- and five-year-old boys.
+                </p>
+                <ul class="tradition-features">
+                    <li>Children dress in traditional kimono or formal wear</li>
+                    <li>Families visit shrines to pray for health and growth</li>
+                    <li>Children receive chitose-ame (thousand-year candy)</li>
+                    <li>Celebrates the healthy growth of children</li>
+                </ul>
+                <div class="ceremony-info">
+                    <h4>Ceremony Elements</h4>
+                    <p>Includes shrine visits, traditional dress, photography, and receiving special candies and gifts</p>
+                </div>
+                <div class="seasonal-info">
+                    <h4>Date</h4>
+                    <p>November 15th, though many families choose nearby weekends for convenience</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Marks important developmental milestones and emphasizes the value placed on children's health and well-being in Japanese culture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.tradition-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

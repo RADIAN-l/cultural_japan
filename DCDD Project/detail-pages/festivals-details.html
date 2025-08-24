@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Festivals - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .festivals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .festival-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .festival-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .festival-header {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .festival-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .festival-header .japanese-name {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .festival-content {
+            padding: 2rem;
+        }
+        
+        .festival-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .festival-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .festival-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .festival-features li:before {
+            content: "🎆";
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .festival-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .date-info {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .date-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .date-info h4:before {
+            content: "📅";
+            margin-right: 0.5rem;
+        }
+        
+        .activities-info {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .activities-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .activities-info h4:before {
+            content: "🎭";
+            margin-right: 0.5rem;
+        }
+        
+        .cultural-significance {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .cultural-significance h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cultural-significance h4:before {
+            content: "🏮";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .festivals-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Japanese Festivals</h1>
+            <p>Experience the vibrant celebrations, ancient traditions, and cultural heritage of Japan's most beloved festivals</p>
+        </div>
+    </section>
+
+    <div class="festivals-grid">
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Gion Matsuri</h3>
+                <div class="japanese-name">祇園祭</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Gion Matsuri is one of Japan's most famous festivals, held annually in Kyoto. It features elaborate floats, traditional music, and religious ceremonies dating back over 1,000 years.
+                </p>
+                <ul class="festival-features">
+                    <li>Month-long celebration with various events and ceremonies</li>
+                    <li>Famous for its massive yama and hoko floats</li>
+                    <li>Traditional music and dance performances</li>
+                    <li>Religious significance for Yasaka Shrine</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>July 1-31, with main events on July 17 (Saki Matsuri) and July 24 (Ato Matsuri)</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Float parades, traditional music, religious ceremonies, street food, and cultural performances</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>One of Japan's three great festivals, preserving ancient traditions and showcasing Kyoto's cultural heritage</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Tanabata</h3>
+                <div class="japanese-name">七夕</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Tanabata is a romantic festival celebrating the annual meeting of the deities Orihime and Hikoboshi, represented by the stars Vega and Altair in the Milky Way.
+                </p>
+                <ul class="festival-features">
+                    <li>People write wishes on colorful strips of paper (tanzaku)</li>
+                    <li>Wishes are hung on bamboo branches</li>
+                    <li>Based on a Chinese legend about star-crossed lovers</li>
+                    <li>Celebrated with parades and traditional costumes</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>July 7th, though some regions celebrate on August 7th due to calendar differences</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Writing wishes, decorating bamboo, traditional dances, fireworks displays, and street festivals</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Celebrates love, hope, and the power of wishes while maintaining connection to ancient astronomical traditions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Obon</h3>
+                <div class="japanese-name">お盆</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Obon is a Buddhist custom to honor the spirits of ancestors. It's a time when people return to their ancestral family places and visit and clean their ancestors' graves.
+                </p>
+                <ul class="festival-features">
+                    <li>Families return to ancestral homes to honor deceased relatives</li>
+                    <li>Graves are cleaned and offerings are made</li>
+                    <li>Traditional Bon Odori dances are performed</li>
+                    <li>Lanterns are lit to guide spirits back to the other world</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>August 13-15 in most regions, though some areas celebrate in July</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Grave visiting, Bon Odori dances, lantern lighting, family gatherings, and traditional meals</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Maintains connection with ancestors and family heritage, emphasizing respect for the past and family bonds</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Setsubun</h3>
+                <div class="japanese-name">節分</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Setsubun marks the day before the beginning of spring in Japan, celebrated with rituals to drive away evil spirits and bring good fortune for the coming year.
+                </p>
+                <ul class="festival-features">
+                    <li>People throw roasted soybeans to drive away demons</li>
+                    <li>Often accompanied by the phrase "Oni wa soto! Fuku wa uchi!"</li>
+                    <li>Eating the number of beans equal to one's age brings good luck</li>
+                    <li>Celebrated at homes, temples, and shrines</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>February 3rd or 4th, marking the transition from winter to spring</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Bean throwing, eating lucky beans, wearing demon masks, shrine visits, and purification rituals</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Represents the purification of homes and the welcoming of spring, emphasizing seasonal transitions and renewal</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Cherry Blossom Festivals</h3>
+                <div class="japanese-name">桜祭り</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Cherry blossom festivals, or hanami, celebrate the transient beauty of cherry blossoms, symbolizing the ephemeral nature of life and the arrival of spring.
+                </p>
+                <ul class="festival-features">
+                    <li>People gather under cherry trees to celebrate spring</li>
+                    <li>Often includes picnics, food, and sake</li>
+                    <li>Cherry blossoms symbolize renewal and beauty</li>
+                    <li>Popular spots include parks, temples, and historical sites</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>Late March to early May, depending on location and weather conditions</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Cherry blossom viewing, picnics, traditional food, sake drinking, photography, and seasonal celebrations</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Celebrates the beauty of nature and the Japanese appreciation for seasonal changes and impermanence</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="festival-card">
+            <div class="festival-header">
+                <h3>Shichi-Go-San</h3>
+                <div class="japanese-name">七五三</div>
+            </div>
+            <div class="festival-content">
+                <p class="festival-description">
+                    Shichi-Go-San is a traditional rite of passage and festival day for three- and seven-year-old girls and three- and five-year-old boys, celebrating their healthy growth.
+                </p>
+                <ul class="festival-features">
+                    <li>Children dress in traditional kimono or formal wear</li>
+                    <li>Families visit shrines to pray for health and growth</li>
+                    <li>Children receive chitose-ame (thousand-year candy)</li>
+                    <li>Celebrates important developmental milestones</li>
+                </ul>
+                <div class="date-info">
+                    <h4>Dates</h4>
+                    <p>November 15th, though many families choose nearby weekends for convenience</p>
+                </div>
+                <div class="activities-info">
+                    <h4>Main Activities</h4>
+                    <p>Shrine visits, traditional dress, photography, receiving candies and gifts, and family celebrations</p>
+                </div>
+                <div class="cultural-significance">
+                    <h4>Cultural Importance</h4>
+                    <p>Marks important developmental milestones and emphasizes the value placed on children's health and well-being</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.festival-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

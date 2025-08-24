@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Food Culture - Detailed Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-hero {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .detail-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .food-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .food-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .food-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+        }
+        
+        .food-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .food-overlay .japanese-name {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .food-content {
+            padding: 2rem;
+        }
+        
+        .food-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .food-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .food-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .food-features li:before {
+            content: "🍽️";
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .food-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .seasonal-info {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .seasonal-info h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .seasonal-info h4:before {
+            content: "🌸";
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .detail-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .food-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Main
+    </button>
+
+    <section class="detail-hero">
+        <div class="container">
+            <h1>Japanese Cuisine</h1>
+            <p>Discover the art, tradition, and flavors that make Japanese food a world-renowned culinary experience</p>
+        </div>
+    </section>
+
+    <div class="food-grid">
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Sushi</h3>
+                    <div class="japanese-name">寿司</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Sushi is a traditional Japanese dish of prepared vinegared rice accompanied by a variety of ingredients, such as seafood, vegetables, and occasionally tropical fruits.
+                </p>
+                <ul class="food-features">
+                    <li>Made with specially prepared rice seasoned with vinegar</li>
+                    <li>Features fresh fish, vegetables, and other ingredients</li>
+                    <li>Various types: Nigiri, Maki, Sashimi, and more</li>
+                    <li>Often served with wasabi, ginger, and soy sauce</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Available year-round, but certain fish are best in specific seasons (e.g., fatty tuna in winter)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Ramen</h3>
+                    <div class="japanese-name">ラーメン</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Ramen is a noodle soup dish that consists of Chinese wheat noodles served in a meat or fish-based broth, often flavored with soy sauce or miso.
+                </p>
+                <ul class="food-features">
+                    <li>Four main soup bases: Shoyu, Miso, Shio, and Tonkotsu</li>
+                    <li>Toppings include chashu pork, soft-boiled eggs, and vegetables</li>
+                    <li>Noodles vary in thickness and texture</li>
+                    <li>Popular comfort food, especially in cold weather</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Perfect for cold weather, but enjoyed year-round. Different broths suit different seasons.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Tempura</h3>
+                    <div class="japanese-name">天ぷら</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Tempura is a dish of battered and deep-fried seafood, meat, and vegetables. The batter is made of cold water and wheat flour, sometimes with egg.
+                </p>
+                <ul class="food-features">
+                    <li>Light, crispy batter that doesn't absorb much oil</li>
+                    <li>Common ingredients: shrimp, fish, eggplant, sweet potato</li>
+                    <li>Served with tentsuyu dipping sauce</li>
+                    <li>Portuguese influence from the 16th century</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Available year-round, but seasonal vegetables make it special in spring and autumn</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Miso Soup</h3>
+                    <div class="japanese-name">味噌汁</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Miso soup is a traditional Japanese soup consisting of a stock called "dashi" into which softened miso paste is mixed. It's a staple of Japanese cuisine.
+                </p>
+                <ul class="food-features">
+                    <li>Made with fermented soybean paste (miso)</li>
+                    <li>Contains dashi stock, tofu, and various vegetables</li>
+                    <li>Different types of miso for different flavors</li>
+                    <li>Often served as part of a traditional breakfast</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Enjoyed year-round, with seasonal vegetables and ingredients changing with the seasons</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Takoyaki</h3>
+                    <div class="japanese-name">たこ焼き</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Takoyaki are ball-shaped Japanese snacks made of a wheat flour-based batter and cooked in a special molded pan. They are typically filled with minced or diced octopus.
+                </p>
+                <ul class="food-features">
+                    <li>Ball-shaped snacks with octopus filling</li>
+                    <li>Topped with takoyaki sauce, mayonnaise, and bonito flakes</li>
+                    <li>Popular street food, especially in Osaka</li>
+                    <li>Often served at festivals and street markets</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Popular year-round, but especially enjoyed during summer festivals and street food events</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                <div class="food-overlay">
+                    <h3>Wagyu Beef</h3>
+                    <div class="japanese-name">和牛</div>
+                </div>
+            </div>
+            <div class="food-content">
+                <p class="food-description">
+                    Wagyu refers to several breeds of cattle genetically predisposed to intense marbling and to producing a high percentage of oleaginous unsaturated fat.
+                </p>
+                <ul class="food-features">
+                    <li>Intense marbling creates melt-in-your-mouth texture</li>
+                    <li>Several grades: A1-A5, with A5 being the highest</li>
+                    <li>Famous varieties: Kobe, Matsusaka, and Ohmi</li>
+                    <li>Often served as steak, sukiyaki, or shabu-shabu</li>
+                </ul>
+                <div class="seasonal-info">
+                    <h4>Best Seasons</h4>
+                    <p>Available year-round, but autumn and winter are considered ideal for rich beef dishes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.food-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

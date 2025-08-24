@@ -1,0 +1,48 @@
+{
+  "name": "cultural-japan-website",
+  "version": "1.0.0",
+  "description": "A comprehensive cultural exploration website showcasing Japanese food, music, traditions, clothing, festivals, and values",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=8000",
+    "build": "echo 'No build process required for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "cultural",
+    "japan",
+    "education",
+    "interactive",
+    "website",
+    "traditions",
+    "food",
+    "music",
+    "clothing",
+    "festivals",
+    "values"
+  ],
+  "author": "Cultural Japan Project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cultural-japan-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cultural-japan-website/issues"
+  },
+  "homepage": "https://yourusername.github.io/cultural-japan-website",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
